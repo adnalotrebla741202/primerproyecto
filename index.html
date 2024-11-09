@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Menjurje</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">El Menjurje</h1>
+        <button class="header__cart-toggle">Ver Carrito
+            <span class="cart__indicator"></span>
+        </button>
+    </header>
+
+    <main class="main">
+        <section class="products">
+            <article class="product">
+                <img src="assets/img/Chalupas_poblanas_modificado_348x348.png" alt="platillo orden de chalupas poblanas" class="product__image">
+                <h2 class="product__title">Chalupas</h2>
+                <span class="product__price">$46.00</span>
+                <button class="product__add-to-cart" data-id="1">Agregar al carrito</button>
+            </article>
+
+            <article class="product">
+                <img src="assets/img/Chancla-Poblana_348x348.png" alt="platillo chancla poblana" class="product__image">
+                <h2 class="product__title">Chancla</h2>
+                <span class="product__price">$50.00</span>
+                <button class="product__add-to-cart" data-id="2">Agregar al carrito</button>
+            </article>
+
+            <article class="product">
+                <img src="assets/img/memela_poblana_ver02_modificada_348x348.png" alt="platillo memela poblana" class="product__image">
+                <h2 class="product__title">Memela</h2>
+                <span class="product__price">$38.00</span>
+                <button class="product__add-to-cart" data-id="3">Agregar al carrito</button>
+            </article>
+
+            <article class="product">
+                <img src="assets/img/Pelona-Poblana_348x348.png" alt="platillo pelona poblana" class="product__image">
+                <h2 class="product__title">Pelona</h2>
+                <span class="product__price">$31.00</span>
+                <button class="product__add-to-cart" data-id="4">Agregar al carrito</button>
+            </article>
+
+            <article class="product">
+                <img src="assets/img/atole02_348x348.png" alt="taza de atole" class="product__image">
+                <h2 class="product__title">Atole</h2>
+                <span class="product__price">$25.00</span>
+                <button class="product__add-to-cart" data-id="5">Agregar al carrito</button>
+            </article>
+
+            <article class="product">
+                <img src="assets/img/cafe01_348x348.png" alt="taza de cafe" class="product__image">
+                <h2 class="product__title">Café</h2>
+                <span class="product__price">$28.00</span>
+                <button class="product__add-to-cart" data-id="6">Agregar al carrito</button>
+            </article>
+
+            <article class="product">
+                <img src="assets/img/CocaCola_348x348.png" alt="vaso de coca cola" class="product__image">
+                <h2 class="product__title">Coca Cola</h2>
+                <span class="product__price">$30.00</span>
+                <button class="product__add-to-cart" data-id="7">Agregar al carrito</button>
+            </article>
+
+            <article class="product">
+                <img src="assets/img/lassi_bebida_348x348.png" alt="lassi bebida a base de yogurt" class="product__image">
+                <h2 class="product__title">Lassi</h2>
+                <span class="product__price">$40.00</span>
+                <button class="product__add-to-cart" data-id="8">Agregar al carrito</button>
+            </article>
+
+        </section>
+    </main>
+
+    <aside class="cart">
+        <h2 class="cart__title">Carrito de Compras</h2>
+        <ul class="cart__items">
+            <!-- Los productos del carrito se agregarán aquí dinámicamente -->
+        </ul>
+        <p class="cart__total">Total: $0.00</p>
+        <button class="cart__clear" disabled>Vaciar Carrito</button>
+        <button class="cart__checkout" disabled>Confirmar Compra</button>
+        <button class="cart__close">Cerrar Carrito</button>
+    </aside>
+</body>
+</html>

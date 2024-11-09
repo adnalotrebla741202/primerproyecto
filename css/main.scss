@@ -1,0 +1,183 @@
+@mixin laptops
+{
+  @media (max-width: 768px)
+  {
+    @content;
+  }
+}
+
+/* Reset de estilos básicos */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body
+{
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header
+{
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+
+  .header__title
+  {
+    font-size: 2rem;
+  }
+
+  .header__cart-toggle
+  {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+}
+
+/* Productos */
+.main
+{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.products
+{
+  gap: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product
+{
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px;
+  width: 210px;
+  text-align: center;
+
+  .product__image
+  {
+    width: 100%;
+    height: auto;
+  }
+
+  .product__title 
+  {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+
+  .product__price
+  {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .product__add-to-cart 
+  {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+/* Carrito */
+.cart
+{
+  position: absolute;
+  top: 0;
+  transform: translateX(-100%);
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -3px 0 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+
+  @include laptops()
+  {
+    width: 100%;
+  }
+
+  .cart__title
+  {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .cart__items
+  {
+    list-style-type: none;
+    margin-bottom: 20px;
+  }
+
+  .cart__item 
+  {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .cart__item-quantity 
+  {
+    margin-left: 10px;
+  }
+
+  .cart__total 
+  {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .cart__clear,
+  .cart__checkout,
+  .cart__close 
+  {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .cart__checkout:disabled,
+  .cart__clear:disabled 
+  {
+    background-color: #ccc;
+  }
+
+  .cart__indicator 
+  {
+    background-color: #fff;
+    color: #f44336;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 1rem;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    display: none;
+  }
+
+  &.cart--visible
+  {
+    left: 100%;
+  }
+}
