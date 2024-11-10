@@ -97,8 +97,10 @@ body {
   margin-bottom: 20px;
 }
 .cart .cart__item {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
   margin-bottom: 10px;
 }
 .cart .cart__item-quantity {
