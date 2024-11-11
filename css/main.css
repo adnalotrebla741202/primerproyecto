@@ -99,8 +99,8 @@ body {
 .cart .cart__item {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-around;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
   margin-bottom: 10px;
 }
 .cart .cart__item-quantity {
