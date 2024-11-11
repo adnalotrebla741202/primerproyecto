@@ -73,6 +73,7 @@ body {
 
 /* Carrito */
 .cart {
+  width: 100%;
   position: absolute;
   top: 0;
   transform: translateX(-100%);
@@ -99,7 +100,7 @@ body {
 .cart .cart__item {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
   align-items: center;
   margin-bottom: 10px;
 }
