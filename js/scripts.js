@@ -30,13 +30,13 @@ const updateCart = () =>
     // Mostrar artículos en el carrito
     cart.forEach(item => 
     {
-        const cartItem = document.createElement('li');
+        const cartItem = document.createElement('p');
         cartItem.classList.add('cart__item');
         cartItem.innerHTML = `
-            ${item.name}     
-            $${item.price.toFixed(2)}
-            <span class="cart__item-quantity">x${item.quantity}</span>
-            <button class="cart__remove-item" data-id="${item.id}">Eliminar</button>
+            <center>${item.name}</center>
+            <center>$${item.price.toFixed(2)}</center>
+            <center><span class="cart__item-quantity">x${item.quantity}</span></center>
+            <center><button class="cart__remove-item" data-id="${item.id}">Eliminar</button></center>
         `;
         cartList.appendChild(cartItem);
         total += item.price * item.quantity;
