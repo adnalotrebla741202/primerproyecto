@@ -33,7 +33,7 @@ const updateCart = () =>
         const cartItem = document.createElement('li');
         cartItem.classList.add('cart__item');
         cartItem.innerHTML = `
-            ${item.name}
+            ${item.name}     
             $${item.price.toFixed(2)}
             <span class="cart__item-quantity">x${item.quantity}</span>
             <button class="cart__remove-item" data-id="${item.id}">Eliminar</button>
